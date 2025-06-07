@@ -32,4 +32,4 @@ Skillora is a modern freelance marketplace and project management platform built
 ### 1. Clone the repository and run both servers
 
 ```bash
-git clone https://github.com/Vishnuvp26/Skillora.git
+git clone https://github.com/harshmriduhash/Skillo.git
