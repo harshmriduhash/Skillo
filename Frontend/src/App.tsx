@@ -11,42 +11,39 @@ const ClientRoutes = lazy(() => import("@/routes/ClientRoutes"));
 const AdminRoutes = lazy(() => import("@/routes/AdminRoutes"));
 
 const App = () => {
+  useEffect(() => {
+    console.log("socket");
 
-    useEffect(() => {
-        console.log("socket");
-        
-        socket.on("connect", () => {
-            console.log(`socket connected to server with id: ${socket.id} `);
-    
-        })
-        socket.on("connect_error", (err) => {
-            console.error("Socket connection error:", err.message);
-        });
-        return () => {
-            if (socket.connected) {
-                socket.disconnect();
-                console.log("Socket disconnected");
-            }
-        }
-    
-    }, []);
+    socket.on("connect", () => {
+      console.log(`socket connected to server with id: ${socket.id} `);
+    });
+    socket.on("connect_error", (err) => {
+      console.error("Socket connection error:", err.message);
+    });
+    return () => {
+      if (socket.connected) {
+        socket.disconnect();
+        console.log("Socket disconnected");
+      }
+    };
+  }, []);
 
-    return (
-        <ThemeProvider>
-            <Toaster position="top-right" reverseOrder={false} />
-            <Router>
-                <Scroll />
-                <Suspense fallback={<Spinner />}>
-                    <Routes>
-                        <Route path="/*" element={<AuthRoutes />} />
-                        <Route path="/freelancer/*" element={<FreelancerRoutes />} />
-                        <Route path="/client/*" element={<ClientRoutes />} />
-                        <Route path="/admin/*" element={<AdminRoutes />} />
-                    </Routes>
-                </Suspense>
-            </Router>
-        </ThemeProvider>
-    );
+  return (
+    <ThemeProvider>
+      <Toaster position="top-right" reverseOrder={false} />
+      <Router>
+        <Scroll />
+        <Suspense fallback={<Spinner />}>
+          <Routes>
+            <Route path="/*" element={<AuthRoutes />} />
+            <Route path="/freelancer/*" element={<FreelancerRoutes />} />
+            <Route path="/client/*" element={<ClientRoutes />} />
+            <Route path="/admin/*" element={<AdminRoutes />} />
+          </Routes>
+        </Suspense>
+      </Router>
+    </ThemeProvider>
+  );
 };
 
 export default App;
