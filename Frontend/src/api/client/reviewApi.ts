@@ -9,30 +9,30 @@ interface ReviewPayload {
 }
 
 export const reviewFreelancer = async ({
-    clientId,
-    contractId,
-    freelancerId,
-    rating,
-    description
+  clientId,
+  contractId,
+  freelancerId,
+  rating,
+  description,
 }: ReviewPayload) => {
-    try {
-        const response = await Axios.post(
-            `/api/client/review/rate-freelancer/${clientId}`,
-            { contractId, freelancerId, rating, description }
-        );
-        return response.data;
-    } catch (error: any) {
-        throw error.response?.data || "Failed to submit review";
-    }
+  try {
+    const response = await Axios.post(
+      `/api/client/review/rate-freelancer/${clientId}`,
+      { contractId, freelancerId, rating, description }
+    );
+    return response.data;
+  } catch (error: any) {
+    throw error.response?.data || "Failed to submit review";
+  }
 };
 
 export const getFreelancerReviews = async (freelancerId: string) => {
-    try {
-        const response = await axiosInstance.get(
-            `/api/client/review/show-reviews/${freelancerId}`
-        );
-        return response.data;
-    } catch (error: any) {
-        throw error.response?.data || "Failed to fetch reviews";
-    }
+  try {
+    const response = await axiosInstance.get(
+      `/api/client/review/show-reviews/${freelancerId}`
+    );
+    return response.data;
+  } catch (error: any) {
+    throw error.response?.data || "Failed to fetch reviews";
+  }
 };
