@@ -4,20 +4,20 @@ import storage from "redux-persist/lib/storage";
 import userReducer from "../authSlice";
 
 const persistConfig = {
-    key: "user",
-    storage,
+  key: "user",
+  storage,
 };
 
 const persistedUserReducer = persistReducer(persistConfig, userReducer);
 
 const store = configureStore({
-    reducer: {
-        user: persistedUserReducer,
-    },
-    middleware: (getDefaultMiddleware) =>
-        getDefaultMiddleware({
-            serializableCheck: false,
-        }),
+  reducer: {
+    user: persistedUserReducer,
+  },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: false,
+    }),
 });
 
 export const persistor = persistStore(store);
