@@ -6,16 +6,16 @@ import Testimonials from "@/components/landing/Testimonials";
 import WhyChooseUs from "@/components/landing/WhyChooseUs";
 
 const Landing = () => {
-    return (
-        <>
-            <Navbar />
-            <Body />
-            <BrowseCategories />
-            <WhyChooseUs/>
-            <Testimonials/>
-            <Footer/>
-        </>
-    );
+  return (
+    <>
+      <Navbar />
+      <Body />
+      <BrowseCategories />
+      <WhyChooseUs />
+      <Testimonials />
+      <Footer />
+    </>
+  );
 };
 
 export default Landing;
