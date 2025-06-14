@@ -1,9 +1,7 @@
 import ViewEarnings from "@/components/earnings/ViewEarnings";
 
 const Earnings = () => {
-    return (
-        <ViewEarnings/>
-    )
+  return <ViewEarnings />;
 };
 
-export default Earnings
+export default Earnings;
