@@ -1,6 +1,6 @@
 # Skillora 🧑‍💻💼
 
-Skillora is a modern freelance marketplace and project management platform built with the MERN stack. It connects **Freelancers**, **Clients**, and **Admin** with seamless project collaboration, secure payments (escrow-based), and real-time mess
+Skillora is a modern freelance marketplace and project management platform built with the MERN stack. It connects **Freelancers**, **Clients**, and **Admin** with seamless project collaboration, secure payments (escrow-based), and real-time mes
 
 ---
 
