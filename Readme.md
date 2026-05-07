@@ -23,7 +23,7 @@ Skillora is a modern freelance marketplace and project management platform built
 - **Styling**: Tailwind + Shadcn
 - **Authentication**: JWT (JSON Web Tokens)
 - **Architecture**: Repository Pattern
-- **Others**: Nodemailer, Socket.io, Redis (for OTP)
+- **Others**: Nodemailer, Socket.io, Redis (for OTP
 
 ---
 
